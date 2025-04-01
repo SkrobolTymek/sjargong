@@ -45,6 +45,9 @@ impl <'a> Lexer<'a>{
     }
 
     pub fn next_token(&mut self) -> Option<Token> {
-        
+            return Token::new(
+                TokenKind::EOFm
+                TextSpan::new(0, 0, '\u0000'.to_string())
+            );
     }
 }
